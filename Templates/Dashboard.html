@@ -1,0 +1,83 @@
+{% extends 'AdminPanel.html' %}
+{% load static %}
+{% block content %}
+<div class="card card-custom">
+    <div class="card-header flex-wrap border-0 pt-6 pb-0">
+        <div class="card-title">
+            <h3 class="card-label">Blogs Dashboard 
+            <span class="text-muted pt-2 font-size-sm d-block">Edit, Delete or Share!</span></h3>
+        </div>
+        <div class="card-toolbar">
+            <a href="/add_blog" class="btn btn-primary font-weight-bolder">
+            <span class="svg-icon svg-icon-md">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <rect x="0" y="0" width="24" height="24" />
+                        <circle fill="#000000" cx="9" cy="15" r="6" />
+                        <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
+                    </g>
+                </svg>
+            </span>Add Blog</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="mb-7">
+            <div class="row align-items-center">
+                <div class="col-lg-9 col-xl-8">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 my-2 my-md-0">
+                            <div class="input-icon">
+                                <form method="POST" action="{% url 'dashboard' %}">
+                                    {% csrf_token %}
+                                    <input type="text" class="form-control" placeholder="Search..." id="kt_datatable_search_query" name="q"/>
+                                    <span>
+                                        <i class="flaticon2-search-1 text-muted"></i>
+                                    </span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <table class="table">
+                <tr class="table-header">
+                    <th class="cell">Image</th>
+                    <th class="cell">Title</th>
+                    <th class="cell">Date</th>
+                    <th class="cell">Published</th>
+                    <th class="cell">Edit/Delete</th>
+                </tr>
+                {% for a in blog %}
+                <tr  class="active">
+                    <td><img src="{{a.image.url}}" style="width: 6vi;"/></td>
+                    <td>{{a.title}}</td>
+                    <td>{{a.date}}</td>
+                    <td>{% if a.published %}Yayında{% else %}Yayında Değil{% endif %}</td>
+                    <td>
+                        <h1><a href="{% url 'update_blog' a.id %}"><button class="button button--greip" role="button" style="background-color: rgb(63, 167, 191); color: aliceblue; border: 0; width: 2dvi; border-radius: 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                        </svg>
+                        </button></a></h1>
+                        <h1><a href="{% url 'delete_blog' a.id %}"><button class="button button--rhea" role="button" style="background-color: rgb(193, 53, 95); color: aliceblue; border: 0; width: 2dvi; border-radius: 5px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                            </svg>
+                        </button></a></h1>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block script %}
+
+{% endblock script %}

@@ -1,0 +1,53 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="elisc_tm_section active animated fadeInLeft" id="contact">
+  <div class="elisc_tm_contact">
+    <div class="tm_content">
+      <div class="wrapper">
+        <div class="left">
+          <div class="elisc_tm_title">
+            <span></span>
+            <h3>{% trans 'İletişime Geç'%}</h3>
+          </div>
+          <div class="text">
+            <p>{% trans 'Şuan yeni projeler almaya hazırım, bana yapmak istediğiniz projeler hakkında mesaj yazmaktan çekinmeyiniz. Benimle 7/24 iletişime geçebilirsiniz.'%}</p>
+          </div>
+          <div class="info">
+            <ul>
+              <li>
+                <a href="tel:+77 022 444 05 05">+90 553 797 72 90</a>
+              </li>
+              <li>
+                <a href="mailto:bilal.deli@wolfeng.tech">bilal.deli@wolfeng.tech</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fields">
+            <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="first">
+                <ul>
+                  <li>
+                    <input type="text" name="name" maxlength="200" required="" id="id_name" placeholder="{% trans 'İsim'%}" autocomplete="off">
+                  </li>
+                  <li>
+                    <input type="email" name="email" maxlength="100" required="" id="id_email" placeholder="Email" autocomplete="off">
+                  </li>
+                </ul>
+              </div>
+              <div class="last">
+                <textarea placeholder="{% trans 'Birşeyler Yazınız...'%}" name="message" cols="40" rows="10" id="id_message" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;full&quot;, &quot;height&quot;: 300, &quot;width&quot;: &quot;78dvi&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_message" data-type="ckeditortype"></textarea>
+              </div>
+              <div class="elisc_tm_button"><button id="send_message" type="submit" class="btn btn-secondary">{% trans 'Gönder'%}</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}  

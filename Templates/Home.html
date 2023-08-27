@@ -1,0 +1,57 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div id="preloader">
+  <div class="loader_line"></div>
+</div>
+<div class="elisc_tm_section animated" id="home">
+    <div class="elisc_tm_home">
+      <div class="tm_content">
+        <div class="details">
+          <div class="left">
+            <div class="title">
+              <h3>{% trans 'Merhaba, Ben'%} <h3 class="blueColor">Bilal Deli!</h3>
+              </h3>
+              <h3>
+                <span class="cd-headline rotate-1">
+                  <span class="blc">{% trans 'Yaratıcı bir'%}</span>
+                  <span class="cd-words-wrapper">
+                    <b class="is-visible">{% trans 'Tasarımcı'%}</b>
+                    <b>{% trans 'Yazılımcı'%}</b>
+                    <b>{% trans 'Oyuncu'%}</b>
+                  </span>
+                </span>
+              </h3>
+            </div>
+            <div class="subtitle">
+              <p>{% trans 'Ben İstanbulda çalışan <span class="blueColor"> 10 yıldan fazla</span> deneyimimle web designer &amp; front‑end developerım'%}</p>
+            </div>
+            <div class="buttons">
+              <div class="elisc_tm_button transition_link">
+                {% if LANGUAGE_CODE == 'en' %} 
+                    <a href="/en/contact">{% trans 'İletişim' %} </a>
+                  {% else %}
+                    <a href="/contact">{% trans 'İletişim' %} </a>
+                  {% endif %}
+              </div>
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <a href="tel:+77 022 444 05 05">+90 553 797 72 90</a>
+                </li>
+                <li>
+                  <a href="mailto:bilal.deli@wolfeng.tech">bilal.deli@wolfeng.tech</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right">
+            <img src="{% static 'img/about/2.png'%}" alt />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}  

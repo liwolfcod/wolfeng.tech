@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-23 15:23+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\Blog\settings.py:96
+msgid "English"
+msgstr ""
+
+#: .\Blog\settings.py:97
+msgid "Turkish"
+msgstr ""
+
+#: .\Templates\About.html:11
+msgid "- Tanıştığımıza Memnun oldum!"
+msgstr "- NICE TO MEET YOU!"
+
+#: .\Templates\About.html:15
+msgid "Web Tasarımcısı &amp;"
+msgstr "Web designer &amp;"
+
+#: .\Templates\About.html:17 .\Templates\Home.html:20
+msgid "Tasarımcı"
+msgstr "Coder"
+
+#: .\Templates\About.html:18 .\Templates\Home.html:21
+msgid "Yazılımcı"
+msgstr "Developer"
+
+#: .\Templates\About.html:19 .\Templates\Home.html:22
+msgid "Oyuncu"
+msgstr "Player"
+
+#: .\Templates\About.html:25 .\Templates\Home.html:32
+msgid "Portföy"
+msgstr "Portfolio"
+
+#: .\Templates\About.html:30
+msgid "Merhabalar! Benim adım"
+msgstr "Hello there! My name is"
+
+#: .\Templates\About.html:30
+msgid ""
+"Ben bir web tasarımcısı &amp; yazılımcısı, ve işene tutkulu bir şekilde "
+"sarılan birisiyim."
+msgstr ""
+"I am a web designer & developer, and I'm very passionate and dedicated to my "
+"work."
+
+#: .\Templates\About.html:31
+msgid ""
+"20 yıllık deneyimimle profesyonel bir yazılımcı olarak, bir projeyi başarıya "
+"ulaştırabilecek bilgi ve yetenekler bütününü elde etmiş bulunmaktayım. "
+"Projelerimin her adımından zevkle gerçekleştirmekten gurur duyuyorum."
+msgstr ""
+"With 20 years experience as a professional a graphic designer, I have "
+"acquired the skills and knowledge necessary to make your project a success. "
+"I enjoy every step of the design process, from discussion and collaboration."
+
+#: .\Templates\About.html:40
+msgid "Yıllık Deneyim"
+msgstr "YEARS OF EXPERIENCE"
+
+#: .\Templates\About.html:46
+msgid "Proje Tamamlandı"
+msgstr "PROJECTS COMPLETED"
+
+#: .\Templates\About.html:52
+msgid "Mutlu Müşteri"
+msgstr "HAPPY CLIENTS"
+
+#: .\Templates\About.html:61
+msgid "- Deneyimlerim"
+msgstr "- EXPERIENCE"
+
+#: .\Templates\About.html:62
+msgid "Benim Hakkımda Herşey!"
+msgstr "Everything about me!"
+
+#: .\Templates\Base.html:49 .\Templates\Base.html:90
+msgid "Anasayfa"
+msgstr "Home"
+
+#: .\Templates\Base.html:93
+msgid "Hakkımda"
+msgstr "About"
+
+#: .\Templates\Base.html:99 .\Templates\Home.html:35
+msgid "İletişim"
+msgstr "Contact"
+
+#: .\Templates\Blog.html:15
+msgid "Bloglarım &amp; Haberlerim"
+msgstr "My Blogs &amp; News"
+
+#: .\Templates\Contact.html:12
+msgid "İletişime Geç"
+msgstr "Get in touch"
+
+#: .\Templates\Contact.html:15
+msgid ""
+"Şuan yeni projeler almaya hazırım, bana yapmak istediğiniz projeler hakkında "
+"mesaj yazmaktan çekinmeyiniz. Benimle 7/24 iletişime geçebilirsiniz."
+msgstr ""
+"I'm currently avaliable to take on new projects, so feel free to send me a "
+"message about anything that you want to run past me. You can contact anytime "
+"at 24/7"
+
+#: .\Templates\Contact.html:26
+msgid "Endüstriyel Yazılım Teknolojileri"
+msgstr "Industrial Software Technologies"
+
+#: .\Templates\Contact.html:38
+msgid "İsim"
+msgstr "Name"
+
+#: .\Templates\Contact.html:46
+msgid "Birşeyler Yazınız..."
+msgstr "Write Something..."
+
+#: .\Templates\Contact.html:48
+msgid "Gönder"
+msgstr "Submit"
+
+#: .\Templates\Home.html:14
+msgid "Merhaba, Ben"
+msgstr "Hi, I'm"
+
+#: .\Templates\Home.html:18
+msgid "Yaratıcı bir"
+msgstr "Creative"
+
+#: .\Templates\Home.html:28
+#, fuzzy
+#| msgid ""
+#| "Ben İstanbulda çalışan <span class=\"blueColor\"> 10 yıldan fazla</span> "
+#| "deneyimimle web designer &amp; front‑end developer"
+msgid ""
+"Ben İstanbulda çalışan <span class=\"blueColor\"> 10 yıldan fazla</span> "
+"deneyimimle web designer &amp; front‑end developerım"
+msgstr ""
+"I'm a İstanbul based web designer & front‑end developer with <span class="
+"\"blueColor\">10+ years</span> of experience"
